@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <base href="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="%%description%%" />
+    <title>%%title%%</title>
+
+    <!-- Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+      integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu"
+      crossorigin="anonymous"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Oswald:300,400,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Fontawesome -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <!-- Recapcha -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    <style>
+      html,
+      body {
+        width: 100%;
+        overflow-x: hidden;
+      }
+      body {
+        height: 100%;
+        font-family: "Oswald", sans-serif;
+        font-weight: 300;
+        padding: 0;
+        margin: 0;
+        font-size: 16px;
+        line-height: 28px;
+        color: #555555;
+        background: #fff;
+        overflow-x: hidden;
+        position: relative;
+      }
+
+      h1 {
+        font-size: 5em;
+        line-height: 1.2em;
+        margin: 0 0 0.3em;
+      }
+      h2 {
+        font-size: 1.8em;
+        line-height: 1.4em;
+        margin: 0 0 0.3em;
+      }
+      h3 {
+        font-size: 1.4em;
+        line-height: 1.4em;
+      }
+      h4 {
+        font-size: 1.25em;
+        line-height: 1.4em;
+      }
+      h5 {
+        font-size: 1.1em;
+        line-height: 1.4em;
+      }
+      h6 {
+        font-size: 1em;
+        line-height: 1.2em;
+      }
+
+      h1 a,
+      h2 a,
+      h3 a,
+      h4 a,
+      h5 a,
+      h6 a {
+        text-decoration: none;
+      }
+      p {
+        padding: 0 0 1em;
+        margin: 0;
+      }
+      a {
+        color: #ff6b3d;
+        outline: 0;
+        font-weight: bold;
+        -webkit-transition: all 0.8s ease;
+        transition: all 0.8s ease;
+      }
+      a:hover {
+        text-decoration: none;
+        color: #ffffff;
+        -webkit-transition: all 0.8s ease;
+        transition: all 0.8s ease;
+      }
+      .highlight {
+        color: #1a489f;
+      }
+
+      .bgimg-1,
+      .bgimg-2,
+      .bgimg-3 {
+        width: 100%;
+        min-height: 800px;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-position: 50% 50%\9 !important;
+        background-size: cover;
+      }
+      .bgimg-1 {
+        background-image: url("https://www2.gast.co.za/l/788663/2020-02-25/cgs5/788663/19828/geobanner.png");
+        height: 100%;
+      }
+
+      #menu {
+        z-index: 99;
+      }
+
+      .top-bar {
+        background: #000080;
+        height: 45px;
+      }
+
+      .navbar {
+        border-radius: 0;
+      }
+
+      .navbar-default {
+        background: rgb(255, 255, 255);
+        min-height: 110px;
+        border: 0;
+        margin-bottom: 0px;
+      }
+
+      .navbar-default .navbar-nav > li > a {
+        color: #212222;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 10px;
+        padding: 19px;
+        white-space: nowrap;
+        font-family: "Montserrat", sans-serif;
+      }
+
+      .navbar-default .navbar-nav > li > a:hover,
+      .navbar-default .navbar-nav > li > a:focus {
+        color: #002e6e;
+      }
+      .navbar-default .navbar-nav > .active > a,
+      .navbar-default .navbar-nav > .active > a:hover,
+      .navbar-default .navbar-nav > .active > a:focus {
+        background: transparent;
+        color: #002e6e;
+      }
+
+      .navbar-right {
+        float: right !important;
+        margin-top: 20px;
+      }
+
+      .navbar-toggle {
+        position: relative;
+        float: right;
+        padding: 12px 12px;
+        padding: 12px 12px;
+        margin-right: 0px;
+        margin-top: 25px;
+        margin-bottom: 20px;
+        background-color: white;
+        background-image: none;
+        border-radius: 4px;
+      }
+
+      .navbar-default .navbar-toggle {
+        border-color: #fff;
+      }
+      .navbar-default .navbar-toggle:focus,
+      .navbar-default .navbar-toggle:hover {
+        background-color: #fff;
+      }
+      .navbar-toggle .icon-bar {
+        display: block;
+        width: 24px;
+        height: 1px;
+        padding: 1px;
+        border-radius: 1px;
+      }
+      .navbar-default .navbar-toggle .icon-bar {
+        background-color: #000080;
+      }
+
+      .btn-default {
+        font-size: 17px;
+        margin: 30px 0 10px;
+        margin-right: 10px;
+        line-height: 20px;
+        padding: 10px 20px;
+        height: 50px;
+        border: 2px solid #fff;
+        background: transparent;
+        transition: all 0.4s;
+        color: #fff;
+        border-radius: 5px;
+        font-weight: 400;
+      }
+      .btn-default:hover,
+      .btn-default:focus,
+      .btn-default:active,
+      .btn-default.active,
+      .open > .dropdown-toggle.btn-default {
+        border: 2px solid white;
+        background: #1b4b9f;
+        color: white;
+      }
+      .btn-primary {
+        font-size: 17px;
+        margin: 30px 0 10px;
+        margin-right: 10px;
+        line-height: 20px;
+        padding: 10px 20px;
+        height: 50px;
+        border: 2px solid #ff6b3d;
+        background: #ff6b3d;
+        transition: all 0.4s;
+        color: white;
+        border-radius: 5px;
+        font-weight: 400;
+      }
+      .btn-primary:hover,
+      .btn-primary:focus,
+      .btn-primary:active,
+      .btn-primary.active,
+      .open > .dropdown-toggle.btn-primary {
+        border: 2px solid #ff6b3d;
+        background: transparent;
+        color: #ff6b3d;
+      }
+      .btn-secondary {
+        font-size: 20px;
+        font-weight: 300;
+        line-height: 20px;
+        padding: 20px 50px;
+        height: 65px;
+        border: none;
+        background: #3eb0f7;
+        transition: all 0.4s;
+        color: white;
+        border-radius: 4px;
+      }
+      .btn-secondary:hover,
+      .btn-secondary:focus,
+      .btn-secondary:active,
+      .btn-secondary.active,
+      .open > .dropdown-toggle.btn-secondary {
+        background: #1f96e0;
+        color: white;
+      }
+
+      .site-name img {
+        width: 181px;
+        height: 53px;
+      }
+      .logo {
+        margin: 100px 0 40px 0;
+      }
+      .logo img {
+        width: 181px;
+        height: 53px;
+      }
+      .landing h1 {
+        font-size: 56px;
+        font-weight: 300;
+        color: #fff;
+        margin: 30px 0 30px 0;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+      }
+      .landing p,
+      .landing h2 {
+        color: #fff;
+      }
+      .landing-text {
+        margin-bottom: 20px;
+        color: white;
+      }
+      .landing-text p {
+        font-size: 22px !important;
+      }
+      .head-btn {
+        margin-bottom: 150px;
+      }
+      .option {
+        text-transform: uppercase;
+        padding: 5px;
+        min-width: 80px;
+        margin-right: 5px;
+        transition: all 0.4s;
+        font-size: 14px;
+        color: #fff;
+      }
+
+      .shadow-container {
+        box-shadow: #000 27px -35px 40px -41px;
+      }
+
+      .intro-header {
+        margin: 50px 0 50px;
+        background: #252a2e;
+        border-radius: 4px;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+
+      .intro-header h3 {
+        padding: 20px 0 10px;
+        color: white;
+        font-weight: 300;
+      }
+      .form-header input {
+        position: relative;
+        padding: 5px 15px;
+      }
+      .form-header .form-control {
+        border-radius: 5px;
+        border: solid 1px #dadada;
+        background-color: #fff;
+        color: #333;
+        height: 55px;
+      }
+      .form-header .btn {
+        border-radius: 5px;
+        height: 55px;
+        width: 100%;
+        background-color: #ff6b3d;
+        border: solid 1px #ff6b3d;
+        color: white;
+        font-size: 22px !important;
+        padding: 0 33px;
+        border: none;
+        margin: 0;
+        -webkit-transition: all 0.8s ease;
+        transition: all 0.8s ease;
+      }
+      .form-header .btn:hover {
+        background-color: #1b4b9f;
+        border: solid 1px white;
+        color: white;
+        -webkit-transition: all 0.8s ease;
+        transition: all 0.8s ease;
+      }
+      .privacy {
+        padding-top: 0;
+        font-size: 13px;
+      }
+      .intro-header p {
+        color: white;
+      }
+      .privacy a {
+        text-decoration: underline;
+        color: white;
+        font-weight: 300;
+      }
+      #policy {
+        padding: 100px 0 70px;
+      }
+
+      .title-line {
+        width: 100px;
+        height: 3px;
+        margin: 0 auto;
+        background: #3eb0f7;
+      }
+
+      .video-header {
+        margin: 40px 0 30px;
+      }
+      .video-embed {
+        position: relative;
+        padding-top: 56.25%;
+        height: 0;
+        background-color: #000000;
+        -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      }
+      .video-embed iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      #footer {
+        background: #fff;
+        padding: 50px 0 50px;
+      }
+
+      .fa-2x {
+        font-size: 1.3em !important;
+      }
+
+      .social ul {
+        padding: 0;
+        list-style: none;
+      }
+      .social li {
+        display: inline-block;
+        padding-right: 0.3em;
+        padding-bottom: 0.3em;
+      }
+      .social li a {
+        display: block;
+        height: 40px;
+        line-height: 40px;
+        color: #ff6b3d;
+        margin-left: 6px;
+      }
+      .social li a:hover {
+        color: #ffffff;
+      }
+
+      .social-light li a {
+        display: block;
+        height: 40px;
+        line-height: 40px;
+        color: #ff6b3d;
+        margin-left: 6px;
+      }
+      .social-light li a:hover {
+        color: #000080;
+      }
+
+      /* Desktop */
+      @media (min-width: 1200px) {
+        .container {
+          width: 1244px;
+        }
+      }
+
+      @media (max-width: 1200px) {
+        .navbar-header {
+          float: none;
+        }
+        .navbar-left,
+        .navbar-right {
+          float: none !important;
+        }
+        .navbar-toggle {
+          display: block;
+        }
+        .navbar-collapse {
+          border-top: 1px solid transparent;
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        }
+        .navbar-fixed-top {
+          top: 0;
+          border-width: 0 0 1px;
+        }
+        .navbar-collapse.collapse {
+          display: none !important;
+        }
+        .navbar-nav {
+          float: none !important;
+          margin-top: 7.5px;
+        }
+        .navbar-nav > li {
+          float: none;
+        }
+        .navbar-nav > li > a {
+          padding-top: 10px;
+          padding-bottom: 10px;
+        }
+        .collapse.in {
+          display: block !important;
+        }
+      }
+
+      /* iPads (portrait) ----------- */
+      @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+        .head-btn {
+          margin: 50px 0 100px;
+        }
+        .intro-header {
+          margin: 50px 0 100px;
+        }
+
+        #policy {
+          padding: 30px 0 50px;
+        }
+        .video-header {
+          margin: 50px 0 30px;
+        }
+
+        .navbar-default .navbar-brand {
+          padding: 0px;
+          margin-top: 19px;
+          margin-left: 33px !important;
+        }
+      }
+
+      /* iPads (landscape) ----------- */
+      @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+        .landing h1 {
+          margin: 60px 0 60px 0;
+        }
+        .landing-text {
+          margin: 60px 0 40px 0;
+        }
+        .intro-header {
+          margin-top: 250px;
+        }
+        .video-header {
+          margin: 50px 0 30px;
+        }
+
+        .container {
+          max-width: 1244px;
+        }
+      }
+
+      /* smart-phone ----------- */
+      @media (max-width: 767px) {
+        .head-btn {
+          margin: 30px 0 80px;
+        }
+        .intro-header {
+          margin: 70px 0 80px;
+        }
+
+        .video-header {
+          margin: 50px 0 30px;
+        }
+
+        .btn-default {
+          font-size: 16px;
+          margin: 30px 0 10px;
+          margin-right: 15px;
+          padding: 10px 10px;
+          height: 35px;
+          border-radius: 5px;
+        }
+        .btn-primary {
+          font-size: 16px;
+          margin: 30px 0 10px;
+          margin-right: 15px;
+          padding: 10px 10px;
+          height: 35px;
+          border-radius: 5px;
+        }
+
+        .navbar-default .navbar-brand {
+          padding: 0px;
+          margin-top: 23px;
+          margin-left: 0px !important;
+        }
+      }
+
+      /* iPhone 6Plus (landscape) ----------- */
+      @media (max-width: 736px) {
+        .feature-img {
+          margin-top: 0;
+        }
+      }
+
+      /* iPhone 6 (landscape) ----------- */
+      @media (max-width: 667px) {
+        .landing h1 {
+          font-size: 50px;
+          margin: 10px 0 25px 0;
+        }
+        .landing-text {
+          margin-top: 20px;
+        }
+      }
+
+      /* iPhone 5 (landscape) ----------- */
+      @media (max-width: 568px) {
+        .landing h1 {
+          font-size: 40px;
+          margin: 20px 0 10px 0;
+        }
+      }
+
+      /* smart phone width: 360px ----------- */
+      @media (max-width: 360px) {
+        .video-header {
+          margin: 30px 0 30px;
+        }
+      }
+
+      /* iPhone 4/5 (portrait) ----------- */
+      @media (max-width: 320px) {
+        .logo {
+          margin: 30px 0 20px 0;
+        }
+        .landing h1 {
+          margin: 20px 0 35px 0;
+        }
+        .btn-default {
+          font-size: 16px;
+          margin: 30px 0 10px;
+          padding: 10px 10px;
+          height: 35px;
+          border-radius: 80px;
+        }
+        .btn-primary {
+          font-size: 16px;
+          margin: 30px 0 10px;
+          margin-right: 15px;
+          padding: 15px 30px;
+          height: 35px;
+          border-radius: 80px;
+        }
+      }
+
+      .top-contact {
+        color: white;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        vertical-align: baseline;
+      }
+
+      .top-contact:hover {
+        color: white;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        text-decoration: underline;
+      }
+      .top-contact:focus {
+        color: white;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        text-decoration: underline;
+      }
+
+      .span4 img {
+        margin-right: 10px;
+      }
+      .span4 .img-left {
+        float: left;
+        width: 100%;
+      }
+      .span4 .img-right {
+        float: right;
+        width: 100%;
+      }
+
+      .fa-orange {
+        color: #ff6b3d;
+      }
+
+      select,
+      textarea {
+        font-size: 18px;
+        font-weight: 300;
+        line-height: inherit;
+        width: 100%;
+        border-radius: 5px;
+        background-color: #fff;
+        color: #929292;
+        height: 55px;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- GAST NAVIGATION -->
+    <div class="top-bar hidden-xs hidden-sm">
+      <div class="container">
+        <div class="col-sm-6 pull-left" style="margin-top: 6px;">
+          <i class="fa fa-phone fa-orange"></i>&nbsp;<a
+            class="top-contact"
+            href="tel:HQ Call: +27 (12) 660 1616"
+            >HQ Call: +27 (12) 660 1616</a
+          >&nbsp;&nbsp;&nbsp;<i class="fa fa-envelope fa-orange"></i>&nbsp;<a
+            class="top-contact"
+            href="mailto:info@gast.co.za"
+            >info@gast.co.za</a
+          >
+        </div>
+        <div class="col-sm-6">
+          <div
+            class="social pull-right"
+            style="margin-top: 1px; margin-right: -8px;"
+          >
+            <ul>
+              <li>
+                <a href="https://www.facebook.com/thegastgroup" target="_blank"
+                  ><i class="fa fa-facebook"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://twitter.com/GASTGroup" target="_blank"
+                  ><i class="fa fa-twitter"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/company/gastgroupsa/"
+                  target="_blank"
+                  ><i class="fa fa-linkedin"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/gastgroupsa/" target="_blank"
+                  ><i class="fa fa-instagram"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <button
+            type="button"
+            class="navbar-toggle collapsed"
+            data-toggle="collapse"
+            data-target="#navbar"
+            aria-expanded="false"
+            aria-controls="navbar"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="https://www.gast.co.za">
+            <img
+              alt="GAST Official Logo"
+              src="https://www2.gast.co.za/l/788663/2019-08-27/8pk/788663/1636/Gast_logo_Official.png"
+            />
+          </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse navbar-right">
+          <ul class="nav navbar-nav">
+            <li><a href="https://www.gast.co.za/">Home</a></li>
+            <li><a href="https://www.gast.co.za/about-us/">About us</a></li>
+            <li>
+              <a href="https://www.gast.co.za/products-services/"
+                >Products & Services</a
+              >
+            </li>
+            <li><a href="https://www.gast.co.za/portfolio/">Portfolio</a></li>
+            <li><a href="https://www.gast.co.za/technical/">Technical</a></li>
+            <li><a href="https://www.gast.co.za/careers/">Careers</a></li>
+            <li><a href="https://www.gast.co.za/contact/">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- end-navigation-section -->
+
+    <section class="bgimg-1"></section>
+
+    <!-- HEADING-FORM-CONTENT -->
+    <div class="container" style="margin-top: -60vh;">
+      <div class="row intro-header">
+        <div class="col-md-7">
+          <div style="margin-top: 4vh;"></div>
+
+          <!-- PARDOT CONTENT -->
+          <div class="landing-text" style="margin-top: 50px;">
+            <h1>
+              <strong>GAST</strong><br /><a
+                href="https://www.gast.co.za/services-geosynthetics/"
+                >Geosynthetics</a
+              >
+            </h1>
+            <p>
+              GAST brings you geosynthetic solutions to suit your every need.
+            </p>
+            <p>
+              Our products and services range from&nbsp;<a
+                href="https://www.gast.co.za/services-geosynthetics/"
+                >geomembranes</a
+              >&nbsp;and&nbsp;<a
+                href="https://www.gast.co.za/services-geosynthetics/"
+                >geotextiles</a
+              >&nbsp; to&nbsp;<a
+                href="https://www.gast.co.za/services-geosynthetics/"
+                >geonets</a
+              >,&nbsp;<a href="https://www.gast.co.za/services-geosynthetics/"
+                >geogrids</a
+              >,&nbsp;<a href="https://www.gast.co.za/services-geosynthetics/"
+                >geocomposites</a
+              >,&nbsp;<a href="https://www.gast.co.za/services-geosynthetics/"
+                >geocells</a
+              >&nbsp;and&nbsp;<a
+                href="https://www.gast.co.za/services-geosynthetics/"
+                >geosynthetic clay liners</a
+              >.
+            </p>
+            <p>
+              Please complete the form for more information on our geosynthetics
+              or any of our other products and services including:&nbsp;<a
+                href="https://www.gast.co.za/services-civil/"
+                >civil</a
+              >,&nbsp;<a href="https://www.gast.co.za/services-construction/"
+                >construction</a
+              >,&nbsp;<a href="https://www.gast.co.za/services-consulting/"
+                >consulting</a
+              >&nbsp;or&nbsp;<a
+                href="https://www.gast.co.za/services-waterproofing/"
+                >waterproofing</a
+              >.
+            </p>
+            <p>
+              For more information on these premium products or our
+              services&nbsp;<i class="fa fa-chevron-right"></i>&nbsp;<a
+                href="https://www.gast.co.za/products-services/"
+                >Click here</a
+              >
+            </p>
+            <div style="margin-top: 5vh;"></div>
+
+            <!-- Navigation Buttons 
+                    <div class="head-btn container-fluid">
+                        <a href="https://www.gast.co.za/products-services/" class="btn-default">Products & Services</a><br>
+                    </div>
+                   Navigation Buttons -->
+          </div>
+        </div>
+
+        <!-- PARDOT CAMPAIGN FORM -->
+        <div class="col-md-5">
+          <div class="intro-header shadow-container">
+            <h3 class="form-title text-center">CONTACT INFORMATION</h3>
+            <p class="text-center">
+              Please complete and submit the form below.
+            </p>
+            <form
+              class="form-header"
+              action="https://www2.gast.co.za/l/788663/2020-03-02/cqwm"
+              role="form"
+              method="POST"
+            >
+              <div class="form-group">
+                <input
+                  class="form-control input-lg"
+                  name="firstname"
+                  type="text"
+                  placeholder="Name *"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  class="form-control input-lg"
+                  name="lastname"
+                  type="text"
+                  placeholder="Surname *"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  class="form-control input-lg"
+                  name="email"
+                  id="email"
+                  type="email"
+                  placeholder="Email address *"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  class="form-control input-lg"
+                  name="phone"
+                  type="text"
+                  placeholder="Phone Number *"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  class="form-control input-lg"
+                  name="company"
+                  type="text"
+                  placeholder="Company *"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  class="form-control input-lg"
+                  name="job-title"
+                  type="text"
+                  placeholder="Job Title *"
+                  required
+                />
+              </div>
+              <br />
+              <div
+                class="g-recaptcha"
+                data-sitekey="6LdH5bQUAAAAANtBl3_Kl_m7P1aJxF4tZsyS7buF"
+              ></div>
+              <br />
+              <div class="form-group last">
+                <input
+                  type="submit"
+                  class="btn btn-warning btn-block btn-lg"
+                  value="SEND FORM"
+                />
+              </div>
+              <p class="privacy text-center">
+                We will not share your email. Read our
+                <a href="https://www.gast.co.za/privacy-policy/" target="_blank"
+                  >privacy policy</a
+                >.
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end-Pardot-form-section -->
+
+    <!-- PRODUCT CONTAINER 
+        <div class="container">
+                <div class="row text-center">
+                    <h1><strong style="font-weight:400; color:#1b4b9f">SUPERIOR WATERPROOFING PRODUCTS</strong></h1>
+                </div>
+                <div style="margin-bottom:5vh"></div>
+
+            <div class="col-md-12">
+                <div class="row span4">
+                    <div class="col-md-8">
+                    <img style="margin-bottom:5vh" class="span4 img-left" src="https://www.gast.co.za/wp-content/uploads/2019/03/blue-container.jpg"/>
+                    </div>
+                    <br>
+                    <div class="col-md-4"></div>
+                    <div class="content-heading" style="font-weight:400; color:#1b4b9f; font-size:27px"><h3>SIMPLICITY</h3></div>
+                    <div style="margin-bottom:1vh"></div>
+                    <p>Donec id elit non mi porta gravida at eget metus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
+                    <p>Donec id elit non mi porta gravida at eget metus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
+                    <p>Donec id elit non mi porta gravida at eget metus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
+                </div>
+            </div>
+        </div>
+
+        <div style="margin-top:5vh"></div>
+        <div style="margin-bottom:5vh"></div>
+
+        <div class="container">
+            <div class="col-md-12">
+                <div class="row span4">
+                    <div class="col-md-4">
+                    <div class="content-heading" style="font-weight:400; color:#1b4b9f; font-size:27px"><h3>PERFECTION</h3></div>
+                    <div style="margin-bottom:1vh"></div>
+                    <p>Donec id elit non mi porta gravida at eget metus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
+                    <p>Donec id elit non mi porta gravida at eget metus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
+                    <p>Donec id elit non mi porta gravida at eget metus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
+                    </div>
+                    <br>
+                    <div class="col-md-8">
+                    <img style="margin-bottom:5vh" class="span4 img-right" src="https://www.gast.co.za/wp-content/uploads/2019/03/BLACK-IMAGE.jpg"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+            end-Product-container -->
+
+    <!-- FOOTER SECTION -->
+    <footer id="footer">
+      <div class="container">
+        <div class="col-sm-4 col-sm-offset-4">
+          <!-- Social Links -->
+          <div class="social social-light text-center">
+            <ul>
+              <li>
+                <a href="https://www.facebook.com/thegastgroup" target="_blank"
+                  ><i class="fa fa-facebook fa-2x"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://twitter.com/GASTGroup" target="_blank"
+                  ><i class="fa fa-twitter fa-2x"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/company/gastgroupsa/"
+                  target="_blank"
+                  ><i class="fa fa-linkedin fa-2x"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/gastgroupsa/" target="_blank"
+                  ><i class="fa fa-instagram fa-2x"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+          <div class="text-center" style="font-size: 18px; color: #757575;">
+            © MCMLXI - MMXIX GAST. All Rights Reserved.
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- end-footer-section -->
+
+    <!-- Bootstrap JS/JQuery -->
+    <script
+      src="https://code.jquery.com/jquery-1.12.4.min.js"
+      integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+      integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
